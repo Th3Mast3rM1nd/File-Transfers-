@@ -88,6 +88,56 @@ import urlib.request
 urllib.request.urlretrieve("http://10.10.10.12:8080/file_to_download.txt", "file_to_download.txt")
 
 ```
+***ssh***
+
+```shell
+scp ~/file_tocopy.txt user@192.182.21.1:~/where_to_copy # to copy file  to the server 
+
+scp user@192.192.1.1:file_to_download.txt ./file_to_download # to copy file  from the server 
+
+```
+
+***SMB***
+
+```shell
+python3 /usr/share/doc/python3-impacket/examples/smbserver.py -smb2support FileToshare $(pwd) #without passowrd 
+
+```
+```shell
+sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -smb2support -user mastermind -password mastermind FileToshare $(pwd) # with password 
+
+```
+```shell
+smbclinet //127.0.0.1/FileToshare -U "mastermind" # connect to smb and get the files 
+
+PS C:\> net use Q: \\10.01.01.1\FileToshare # on windows 
+PS C:\> pushd \\10.10.10.132\FileToshare #on windows 
+
+```
+***web servers***
+
+```shell
+php -S 0.0.0.0:1337
+
+```
+```shell
+python3 -m http.server 8080
+
+```
+```shell
+python -m SimpleHTTPServer 8080 #python2
+
+```
+```shell
+ruby -run -ehttpd . -p8080
+```
+
+
+
+
+
+
+
 
 
 
