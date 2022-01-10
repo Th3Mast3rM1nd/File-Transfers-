@@ -132,6 +132,20 @@ python -m SimpleHTTPServer 8080 #python2
 ruby -run -ehttpd . -p8080
 ```
 
+***ftp***
+
+```shell
+pip3 install pyftpdlib # install this module on ur machine
+
+```
+
+```shell
+python3 -m pyftpdlib --user=mastermind --password=mastermind -w #setup ftp server 
+
+```
+```shell
+ftp ip 2121 # connect to ftp server on 2121 
+```
 
 
 
